@@ -5,7 +5,7 @@ import os
 pygame.init()
 WIDTH, HEIGHT = 400, 600
 screen = pygame.display.set_mode((WIDTH,HEIGHT))
-pygame.display.set_caption("Perry the platypus")
+pygame.display.set_caption("Perry the Platypus")
 
 # FPS 
 FPS = 30
@@ -82,7 +82,7 @@ COLOR = {
     "BLACK": (0,0,0),
     "RED": (255,0,0),
     "GREEN": (0, 255, 0),
-    "ORANGE": (237, 145, 33),
+    "ORANGE": (237, 97, 16),
     "GOLD": (255, 215, 0),
     "BEIGE": (245, 245, 220),
     "BRONZE": (205, 127, 50),
@@ -497,9 +497,9 @@ def game_playing_normal():
     pygame.mixer.music.play()
     
     dialogues_main_story = [
-            init_story_character("Bá Duy", ba_duy_image, "Ê game chạy nhanh hơn thì phải nè"), # first_time_playing_normal = True
-    init_story_character("Bá Duy", ba_duy_image, f"Nhanh hơn tức là cơ hội đến sớm hơn để đạt {hard_mode_score_requirement} điểm đó cưng"),
-    init_story_character("Bá Duy", ba_duy_image, f"Rồi chơi tới luôn. Lấy cái {hard_mode_score_requirement} điểm cho anh đi"),
+            init_story_character("Bá Duy", ba_duy_image, "Ê, game chạy nhanh hơn thì phải nè."), # first_time_playing_normal = True
+    init_story_character("Bá Duy", ba_duy_image, f"Nhanh hơn tức là cơ hội đến sớm hơn để đạt {hard_mode_score_requirement} điểm đó cưng."),
+    init_story_character("Bá Duy", ba_duy_image, f"Rồi chơi tới luôn. Lấy cái {hard_mode_score_requirement} điểm cho anh đi."),
     ]
 
     dialogues = []
@@ -630,10 +630,10 @@ def game_playing_hard():
     pygame.mixer.music.play()
 
     dialogues_first_time_playing_hard = [
-        init_story_character("Bá Duy", ba_duy_image, "Ê có mấy em bò ở dưới kìa ... HÚP LẸ"), # first_time_playing_hard = True
-        init_story_character("Bá Duy", ba_duy_image, "Bấm mũi tên xuống hoặc chuột phải để vét cạn"),
-        init_story_character("Bá Duy", ba_duy_image, "Anh vét 10 em bò rồi đấy, còn lại 10 em nữa nhường mấy đứa tất"),
-        init_story_character("Bá Duy", ba_duy_image, "Từ giờ trở đi chỉ có bò mới làm điểm tăng lên được"),
+        init_story_character("Bá Duy", ba_duy_image, "Ê, có mấy em bò ở dưới kìa... HÚP LẸ!"), # first_time_playing_hard = True
+        init_story_character("Bá Duy", ba_duy_image, "Bấm mũi tên xuống hoặc chuột phải để vét cạn."),
+        init_story_character("Bá Duy", ba_duy_image, "Anh vét 10 em bò rồi đấy, còn lại 10 em nữa nhường mấy đứa tất."),
+        init_story_character("Bá Duy", ba_duy_image, "Từ giờ trở đi chỉ có bò mới làm điểm tăng lên được."),
     ]
 
     dialogues = []
@@ -795,10 +795,10 @@ def game_menu():
     
     dialogues_chicken = [
         init_story_character("Bá Duy", ba_duy_image, "Gà thế!"),
-        init_story_character("Bá Duy", ba_duy_image, "Có cái UFO cũng không lái được thì sao lái mấy em đây?"),
-        init_story_character("Bá Duy", ba_duy_image, "Nhìn mà chán"),
+        init_story_character("Bá Duy", ba_duy_image, "Có cái UFO cũng không lái được thì sao lái mấy chị đây?"),
+        init_story_character("Bá Duy", ba_duy_image, "Nhìn mà chán."),
         init_story_character("Bá Duy", ba_duy_image, "Ủa thứ Tư này có đá banh không mấy đứa?"),
-        init_story_character("Bá Duy", ba_duy_image, "Skibidi dop dop dop yes yes"),
+        init_story_character("Bá Duy", ba_duy_image, "Skibidi dop dop dop yes yes :)"),
     ]
 
     dialogues = []
@@ -914,8 +914,8 @@ def game_over():
         current_character.print_image(screen) # IN CHARACTER
 
         menu_game_over.print_image(screen) # IN MENU GAME OVER
-        draw_text(f"{score}", FONT["MARIO_BIG"],  COLOR["BRONZE"], WIDTH // 2, HEIGHT // 2 - 40)
-        draw_text(f"{best_score}", FONT["MARIO_BIG"],  COLOR["BRONZE"], WIDTH // 2, HEIGHT // 2 + 70)
+        draw_text(f"{score}", FONT["MARIO_BIG"],  COLOR["ORANGE"], WIDTH // 2, HEIGHT // 2 - 40)
+        draw_text(f"{best_score}", FONT["MARIO_BIG"],  COLOR["ORANGE"], WIDTH // 2, HEIGHT // 2 + 70)
 
         for event in pygame.event.get(): # CHECK THAO TÁC
             if event.type == pygame.QUIT:
@@ -942,17 +942,17 @@ def first_conversation():
 
     dialogues = [
         init_story_character("Bá Duy", ba_duy_image, "Hello mấy đứa!"),
-        init_story_character("Bá Duy", ba_duy_image, "Nhân dịp thầy Hùng tặng 20 triệu cái laptop"),
-        init_story_character("Bá Duy", ba_duy_image, "Thầy cũng đem theo con hàng 43 cái ufo sang xịn mịn"),
-        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Chào các anh các chị"),
-        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Tôi chỉ hướng dẫn sơ qua thôi"),
-        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "À thôi"),
-        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Cái game Flappy Bird này ai mà chả biết"),
-        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Tôi bảo rồi ... tự học là tốt nhất!"),
-        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Bây giờ thầy Duy sẽ quản lớp"),
-        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Tôi bận dẫn quân KHTN đi ICPC rồi"),
-        init_story_character("Bá Duy", ba_duy_image, "ủa thầy đi rồi à?"),
-        init_story_character("Bá Duy", ba_duy_image, "Vậy thì ... vô game nè!"),
+        init_story_character("Bá Duy", ba_duy_image, "Nhân dịp thầy Hùng tặng 20 triệu cái laptop..."),
+        init_story_character("Bá Duy", ba_duy_image, "Thầy cũng đem theo con hàng 43 cái UFO sang xịn mịn."),
+        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Chào các anh các chị."),
+        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Tôi chỉ hướng dẫn sơ qua thôi."),
+        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "À thôi."),
+        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Cái game Flappy Bird này ai mà chả biết."),
+        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Tôi bảo rồi... tự học là tốt nhất!"),
+        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Bây giờ thầy Duy sẽ quản lớp."),
+        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Tôi bận dẫn quân KHTN đi ICPC rồi."),
+        init_story_character("Bá Duy", ba_duy_image, "Ủa thầy đi rồi à?"),
+        init_story_character("Bá Duy", ba_duy_image, "Vậy thì... vô game nè!"),
     ]
 
     # Chỉ số hội thoại hiện tại
@@ -1033,25 +1033,25 @@ def second_conversation():
     pygame.mixer.Sound.play(bomb_sound)
 
     dialogues = [
-        init_story_character("Đỗ Phú Quí", do_phu_qui_image, "Lô mấy nhóc"),
+        init_story_character("Đỗ Phú Quí", do_phu_qui_image, "Lô mấy nhóc."),
         init_story_character("Bá Duy", ba_duy_image, "Ai đó?"),
-        init_story_character("Bá Duy", ba_duy_image, "Ủa khoan ... hình như kế bên kia ... là thầy Hùng mà!!!"),
-        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Mấy đứa ơi, thầy bị Đỗ Phú Quí, J97, Đàm Vĩnh Hưng tấn công ..."),
-        init_story_character("J97", j97_image, "Haha hahahahhahah *cười kiểu Bến Tre lạnh lùng*", FONT["MONTESRRAT_ITALIC"]),
+        init_story_character("Bá Duy", ba_duy_image, "Ủa khoan... hình như kế bên kia... là thầy Hùng mà!"),
+        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Mấy đứa ơi, thầy bị Đỗ Phú Quí, J97, Đàm Vĩnh Hưng tấn công..."),
+        init_story_character("J97", j97_image, "Hahahahahahaha! *cười kiểu Bến Tre lạnh lùng*", FONT["MONTESRRAT_ITALIC"]),
         init_story_character("J97", j97_image, "Các ngươi hãy đầu hàng trước-"),
         init_story_character("Đỗ Phú Quí", do_phu_qui_image, "PICKLEBALL!!!"),
         init_story_character("Đàm Vĩnh Hưng", dam_vinh_hung_image, "Thầy Hùng của các ngươi quá vip pro đỉnh móc kịch trần, đang dần tranh ánh hào quang của bọn ta!"),
         init_story_character("Đàm Vĩnh Hưng", dam_vinh_hung_image, "Nhưng điều đó không thể thành hiện thực được đâu!!!"),
-        init_story_character("Đàm Vĩnh Hưng", dam_vinh_hung_image, "Bởi vì ... chúng ta đã có ... một buổi đại off fan ở toà tháp đôi ở New York!!!"),
-        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Thầy có để lại cho mấy đứa chiếc Boeing 767 ở sân trường ..."),
-        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Mấy đứa hãy dùng nó mà chống lại kẻ ác"),
+        init_story_character("Đàm Vĩnh Hưng", dam_vinh_hung_image, "Bởi vì... chúng ta đã có... một buổi đại off fan tại toà tháp đôi ở New York!"),
+        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Thầy có để lại cho mấy đứa chiếc Boeing 767 ở sân trường..."),
+        init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Mấy đứa hãy dùng nó mà chống lại kẻ ác..."),
         init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "..."),
-        init_story_character("Bá Duy", ba_duy_image, "THẦY HÙNG !!??"),
-        init_story_character("Bá Duy", ba_duy_image, "Này mấy đứa, không có thời gian để khóc lóc đâu"),
-        init_story_character("Bá Duy", ba_duy_image, "Hãy cùng nhau lên đỉnh và đánh bại chúng"),
-        init_story_character("Bá Duy", ba_duy_image, "Nhưng mà có vẻ máy bay thiếu nhiên liệu"),
-        init_story_character("Bá Duy", ba_duy_image, "À anh biết rồi! Loại máy bay này dùng sữa làm nhiên liệu"),
-        init_story_character("Bá Duy", ba_duy_image, "Chúng ta cần vét thêm 10 em nữa"),
+        init_story_character("Bá Duy", ba_duy_image, "THẦY HÙNG!!??"),
+        init_story_character("Bá Duy", ba_duy_image, "Này mấy đứa, không có thời gian để khóc lóc đâu."),
+        init_story_character("Bá Duy", ba_duy_image, "Hãy cùng nhau bay lên và đánh bại chúng."),
+        init_story_character("Bá Duy", ba_duy_image, "Nhưng mà có vẻ máy bay thiếu nhiên liệu."),
+        init_story_character("Bá Duy", ba_duy_image, "À, anh biết rồi! Loại máy bay này dùng sữa làm nhiên liệu."),
+        init_story_character("Bá Duy", ba_duy_image, "Chúng ta cần vét thêm 10 em nữa."),
     ]
 
     # Chỉ số hội thoại hiện tại
@@ -1133,7 +1133,7 @@ def third_conversation():
     twin_towers = obstacle(twin_towers_image, x_first_spawn, 0, 0, 0, obstacle_velocity_x)
 
     dialogues = [
-        init_story_character("Bá Duy", ba_duy_image, "VÌ NGUYỄN THANH HÙNG !!!")
+        init_story_character("Bá Duy", ba_duy_image, "VÌ NGUYỄN THANH HÙNG!!!")
     ]
 
     # Chỉ số hội thoại hiện tại
@@ -1207,7 +1207,7 @@ def third_conversation():
 '''DƯỚI ĐÂY LÀ CÁC THÔNG SỐ CÓ THỂ ĐƯỢC TUỲ CHỈNH SAO CHO PHÙ HỢP VỚI NGƯỜI CHƠI'''
 
 # ĐIỂM SỐ GIỮA CÁC MODE
-normal_mode_score_requirement = 15
+normal_mode_score_requirement = 10
 hard_mode_score_requirement = 30
 
 # THÔNG SỐ HỘI THOẠI
@@ -1247,34 +1247,6 @@ first_time_playing_normal = True
 first_time_playing_hard = True
 first_time_collecting_10_coins = True
 first_time_collecting_20_coins = True
-
-story_line = [
-    init_story_character("Bá Duy", ba_duy_image, "Đạt thử 10 điểm xem trình cái nào?"), # first_time_playing_easy = True
-
-    init_story_character("Bá Duy", ba_duy_image, "Ê game chạy nhanh hơn thì phải nè"), # first_time_playing_normal = True
-    init_story_character("Bá Duy", ba_duy_image, f"Nhanh hơn tức là cơ hội đến sớm hơn để đạt {hard_mode_score_requirement} điểm đó cưng"),
-    init_story_character("Bá Duy", ba_duy_image, f"Rồi chơi tới luôn. Lấy cái {hard_mode_score_requirement} điểm cho anh đi"),
-
-    init_story_character("Bá Duy", ba_duy_image, "Ê có mấy em bò ở dưới kìa ... HÚP LẸ"), # first_time_playing_hard = True
-    init_story_character("Bá Duy", ba_duy_image, "Bấm mũi tên xuống hoặc chuột phải để vét cạn"),
-    init_story_character("Bá Duy", ba_duy_image, "Anh vét 10 em bò rồi đấy, còn lại 10 em nữa nhường mấy đứa tất"),
-
-    init_story_character("???", char_perry_ufo_normal_image, "Bỗng có tiếng động lạ"), # first_time_collecting_10_coins = True
-    init_story_character("Bá Duy", ba_duy_image, "Cái gì mà to chà bá vậy!?"),
-    init_story_character("Bá Duy", ba_duy_image, "Ủa khoan ... đó là thầy Hùng mà!!!"),
-    init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Mấy đứa ơi, thầy bị Đỗ Phú Quí, J97, Đàm Vĩnh Hưng tấn công ..."),
-    init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Thầy có để lại cho mấy đứa chiếc Boeing 767 ở sân trường ..."),
-    init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "Mấy đứa hãy dùng nó mà chống lại kẻ ác"),
-    init_story_character("Nguyễn Thanh Hùng", nguyen_thanh_hung_image, "..."),
-    init_story_character("Bá Duy", ba_duy_image, "THẦY HÙNG !!??"),
-    init_story_character("???", char_perry_ufo_normal_image, "Trước khi biến mất, thầy Hùng có chỉ vào toà tháp đôi ở New York"),
-    init_story_character("???", char_perry_ufo_normal_image, "... Những con người này đang tổ chức off fan ở đó!!!"),
-    init_story_character("Bá Duy", ba_duy_image, "Này mấy đứa, không có thời gian để khóc lóc đâu"),
-    init_story_character("Bá Duy", ba_duy_image, "Hãy cùng nhau bay lên và đánh bại chúng"),
-    init_story_character("Bá Duy", ba_duy_image, "Nhưng mà có vẻ máy bay thiếu nhiên liệu"),
-    init_story_character("Bá Duy", ba_duy_image, "À anh biết rồi! Loại máy bay này dùng sữa làm nhiên liệu"),
-    init_story_character("Bá Duy", ba_duy_image, "Chúng ta cần vét thêm 10 em nữa"),
-]
 
 # THÔNG SỐ NHÂN VẬT
 character_width = 50
@@ -1342,13 +1314,13 @@ best_score = 0
 total_coins = 0
 
 RANDOM_HINT = [
-    "Press down-but to have a long dic-",
-    "Right mouse for a long dic-",
-    f"Score 69 for a sexy",
+    "Press ↓ to have a long dic-",
+    "Right-click for a long dic-",
+    f"Score 69 for a sexy girl :)",
     f"Score {hard_mode_score_requirement} for a surprise",
-    f"score {normal_mode_score_requirement} = faster game speed",
+    f"Score {normal_mode_score_requirement} = faster game speed",
     "Press 2 for 200 points",
-    "Why if press 1",
+    "Try pressing 1 :)",
 ]
 
 # CÁC TRẠNG THÁI CỦA GAME
