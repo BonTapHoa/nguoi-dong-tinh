@@ -838,7 +838,7 @@ def game_menu():
         draw_text("FLAPPY BIRD", FONT["MARIO_BIG"], COLOR["BROWN"], WIDTH // 2, HEIGHT // 2 - 100) # IN CHỮ Ở MENU
         # draw_text("PRESS SPACE TO PLAY", FONT["MARIO_SMALL"], COLOR["MIDNIGHT_BLUE"], WIDTH // 2, HEIGHT // 2 + 100)
         # draw_text(hint, FONT["MARIO_SMALL"], COLOR["MIDNIGHT_BLUE"], WIDTH // 2, HEIGHT // 2 + 150)
-
+ 
         # HIỆN THỊ HỘP THOẠI
         current_time = pygame.time.get_ticks()
         # Nếu chữ đã hiển thị hết, bắt đầu đếm thời gian trước khi chuyển tiếp
@@ -1205,7 +1205,7 @@ def third_conversation():
         pygame.time.Clock().tick(FPS)
 
 '''DƯỚI ĐÂY LÀ CÁC THÔNG SỐ CÓ THỂ ĐƯỢC TUỲ CHỈNH SAO CHO PHÙ HỢP VỚI NGƯỜI CHƠI'''
-
+# THÔNG SỐ CỦA GAME  
 # ĐIỂM SỐ GIỮA CÁC MODE
 normal_mode_score_requirement = 15
 hard_mode_score_requirement = 30
